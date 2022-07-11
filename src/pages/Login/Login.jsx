@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { login } from '../../utilities/users-service'
-import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
+import { Typography, Stack, Box, Button } from '@mui/material';
+import TextField from '@mui/material/TextField';
 
 const Login = ({ setUser }) => {
-    const [message, setMessage] = useState("We'll never share your email with anyone else.")
+    const [message, setMessage] = useState("We will not share your email with anyone else.")
     const [credentials, setCredentials] = useState({
         email: '',
         password: ''
@@ -26,7 +26,7 @@ const Login = ({ setUser }) => {
             if (user) {
                 setUser(user)
                 // Redirect to movies page after successful login
-                navigate('/')
+                navigate('/home')
             } else {
                 throw new Error
             }
@@ -36,36 +36,45 @@ const Login = ({ setUser }) => {
     }
 
     return (
-        <div>
+        <Stack>
             <Typography variant='h3' sx={{ marginTop: 2 }}>Login</Typography>
-            <form className='mx-auto w-50 border p-3' onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input
+            <Box
+                component="form"
+                sx={{
+                    '& .MuiTextField-root': { m: 1, width: '25ch' },
+                    alignItems: 'center'
+                }}
+                noValidate
+                autoComplete="off"
+                onSubmit={handleSubmit}
+            >
+                <Stack>
+                    <TextField
+                        required
+                        id="outlined-password-input"
                         type="email"
-                        className="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                        name='email'
+                        label="Email Address"
+                        name="email"
+                        defaultValue=""
                         onChange={handleChange}
                         value={credentials.email}
                     />
-                    <div id="emailHelp" className="form-text">{message}</div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input
+                    <Stack id="emailHelp" className="form-text">{message}</Stack>
+                </Stack>
+                <Stack className="mb-3">
+                    <TextField
+                        required
                         type="password"
-                        className="form-control"
-                        id="exampleInputPassword1"
+                        id="outlined-password-input"
+                        label="Password"
                         name='password'
                         onChange={handleChange}
                         value={credentials.password}
                     />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
-        </div>
+                </Stack>
+                <Button type="submit" >Submit</Button>
+            </Box>
+        </Stack>
     );
 }
 

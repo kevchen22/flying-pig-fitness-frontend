@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Stack, Typography, Button } from '@mui/material'
 
-import BannerImage from '../assets/images/Banner.png'
+import BannerImage from '../../assets/images/Banner.png'
 
-const Banner = () => {
+const LandingPage = () => {
     return (
         <Box sx={{
             mt: { lg: '212px', xs: '70px' },
@@ -28,13 +28,6 @@ const Banner = () => {
             >
                 Check out the most effective exercises!
             </Typography>
-            <Button 
-            variant="contained" 
-            color="error" 
-            href="#exercises"
-            sx={{ backgroundColor: '#ff2625',
-            padding: '10px' }}
-            >Explore Exercises</Button>
             <Typography
                 fontWeight={600}
                 color="#ff2625"
@@ -51,4 +44,4 @@ const Banner = () => {
     );
 }
 
-export default Banner;
+export default LandingPage;
