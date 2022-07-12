@@ -40,11 +40,13 @@ const Navbar = ({ user, setUser, logOut }) => {
                                 {
                                     textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625'
                                 }}>Home</Link>
-                            <a href="#exercises" style={
+                            <a href="/home#exercises" style={
                                 {
                                     textDecoration: 'none', color: '#3A1212'
                                 }}>Exercises</a>
                             <Link className="nav-link" to="/workouts">Workout Log</Link>
+                            <Link className="nav-link" to="/food">Food Nutrition</Link>
+                            <Link className="nav-link" to="/foodlog">Food Diary</Link>
                             <Link className="nav-link" onClick={handleLogOut} to="/">Logout</Link>
                         </Stack>
 

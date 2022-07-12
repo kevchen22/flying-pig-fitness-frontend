@@ -1,41 +1,41 @@
 import { useState, useEffect } from 'react'
-import { getWorkout } from '../../utilities/workout-service'
+import { getFood } from '../../utilities/foodlog-service'
 import { Link, useNavigate } from 'react-router-dom'
 import { Stack, Typography, Button } from '@mui/material'
 
 
-const Workouts = () => {
-    const [workouts, setWorkouts] = useState([])
+const FoodLog = () => {
+    const [foodLog, setFoodLog] = useState([])
     const navigate = useNavigate()
 
     useEffect(() => {
         (async () => {
-            const workoutsRes = await getWorkout()
-            setWorkouts(workoutsRes.data)
+            const foodLogRes = await getFood()
+            setFoodLog(foodLogRes.data)
         })()
     }, [])
 
     return (
-        <Stack id='workout-wrapper'>
+        <Stack id='food-wrapper'>
             <Button
                 variant="contained"
                 color="error"
-                href="/workouts/create"
+                href="/foodlog/create"
                 sx={{
                     backgroundColor: '#ff2625',
                     padding: '10px',
                     mt: 5
                 }}
-            >Add Workouts</Button>
+            >Add Food</Button>
 
-            <Stack id='workout-container'>
+            <Stack id='food-container'>
                 {
-                    workouts.map(workout =>
+                    foodLog.map(food =>
                         <Stack
                             className="card"
-                            id='workout-card'
-                            key={workouts._id}
-                            onClick={() => navigate(`/workouts/${workout._id}`, { state: workout })}
+                            id='food-card'
+                            key={foodLog._id}
+                            onClick={() => navigate(`/foodlog/${foodLog._id}`, { state: food })}
                             flexWrap="wrap"
                             direction="row"
                         >
@@ -48,25 +48,37 @@ const Workouts = () => {
                                 <Typography variant="h6" sx={{
                                     mr: 3,
                                     mt: 1
-                                }}>Workout: {workout.workout}</Typography>
+                                }}>Food: {food.food}</Typography>
                                 <Typography sx={{
                                     mr: 3,
                                     mt: 1
-                                }}>Duration: {workout.duration} minutes</Typography>
+                                }}>Calories: {food.calories}</Typography>
                                 <Typography sx={{
                                     mr: 3,
                                     mt: 1
-                                }}>Calories burned: {workout.calories}</Typography>
+                                }}>Protein (grams): {food.protein}</Typography>
                                 <Typography sx={{
                                     mr: 3,
                                     mt: 1
-                                }}>Average Heart Rate: {workout.avgHeartRate}</Typography>
+                                }}>Carbohydrates (grams): {food.carbs}</Typography>
                                 <Typography sx={{
                                     mr: 3,
                                     mt: 1,
-                                }}>Date: {workout.date}</Typography>
+                                }}>Total Fiber (grams): {food.fiber}</Typography>
+                                <Typography sx={{
+                                    mr: 3,
+                                    mt: 1,
+                                }}>Total Fat (grams): {food.fat}</Typography>
+                                <Typography sx={{
+                                    mr: 3,
+                                    mt: 1,
+                                }}>Sugar (grams): {food.sugar}</Typography>
+                                <Typography sx={{
+                                    mr: 3,
+                                    mt: 1,
+                                }}>Date: {food.date}</Typography>
                                 <Button
-                                    onClick={() => navigate(`/workouts/${workout._id}/edit`, { state: workout })}
+                                    onClick={() => navigate(`/foodlog/${foodLog._id}/edit`, { state: food })}
                                 >
                                     Edit
                                 </Button>
@@ -80,4 +92,4 @@ const Workouts = () => {
     )
 }
 
-export default Workouts;
+export default FoodLog;

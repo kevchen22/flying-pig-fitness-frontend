@@ -11,6 +11,9 @@ import SignUp from '../SignUp/SignUp';
 import CreateWorkout from '../CreateWorkout/CreateWorkout';
 import Workouts from '../Workouts/Workouts';
 import LandingPage from '../LandingPage/LandingPage';
+import FoodNutrition from '../FoodNutrition/FoodNutrition';
+import FoodLog from '../FoodLog/FoodLog';
+import CreateFood from '../CreateFood/CreateFood';
 
 // Components
 import Navbar from '../../components/Navbar';
@@ -18,6 +21,8 @@ import Footer from '../../components/Footer';
 import ExerciseDetail from '../ExerciseDetail/ExerciseDetail';
 import WorkoutDetails from '../../components/WorkoutDetails';
 import UpdateWorkoutForm from '../../components/UpdateWorkoutForm';
+import FoodDetails from '../../components/FoodDetails';
+import UpdateFoodForm from '../../components/UpdateFoodForm';
 
 // Services
 import * as usersService from '../../utilities/users-service'
@@ -47,6 +52,11 @@ const App = () => {
           <Route path='/workouts/create' element={<CreateWorkout />} />
           <Route path='/workouts/:id' element={<WorkoutDetails />} />
           <Route path='/workouts/:id/edit' element={<UpdateWorkoutForm />} />
+          <Route path='/food' element={<FoodNutrition />} />
+          <Route path='/foodlog' element={<FoodLog />} />
+          <Route path='/foodlog/create' element={<CreateFood />} />
+          <Route path='/foodlog/:id' element={<FoodDetails />} />
+          <Route path='/foodlog/:id/edit' element={<UpdateFoodForm />} />
           </>
         }
 

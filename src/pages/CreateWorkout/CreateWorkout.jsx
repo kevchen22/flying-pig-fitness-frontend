@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import * as workoutService from '../../utilities/workout-service'
 import { useNavigate } from 'react-router-dom'
-import './CreateWorkout.css'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Stack, Button } from '@mui/material';
