@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Flying-Pig-Fitness-Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Creating the frontend of the fitness application, creating pages, components and incorporating the requests to API's.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+1. React
+2. React Router
+3. React DOM
+4. Axios
+5. Material UI
 
-### `npm start`
+## Approach Taken
+Starting out my project, I wanted to create the wireframe and a base for the app before anything else. The login, sign up, and CRUD functionalities were developed last throught this project. The first thing I did was research API's and how to use them, luckily I stumbled across a great API in exerciseDB through Rapid API. This API had 1300+ exercises and the main issue throughout the entirety of the project was how to access them correctly, as it was a ton of data to go through. The exercise pages and sections were created first as this was the bulk of the project. Later I incorporated the logic with users and limited access to people who weren't signed up or logged in. The only way to access ANYTHING within the project is by signing in or logging in. Without signing in or login, the only parts of the site accessible are the landing page and the sign up/login pages. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Unsolved Problems
+An unsolved problem is that when you click on an exercise at the bottom of the home screen and scroll down on the exercise page, the list of 'similar exercises' and 'exercises that use the same equipment' can go on forever to the right. I want to make that a little more smooth and limit the amount of exercises you can see at once by either incorporationg a button to scroll through the options or creating different pages like I have on the home page.
+Another unsolved problem is that I wanted to combine the food diary with the food search API, so when you search for a food you can just click a button to add to your food diary.
+Similar to the issue I just mentioned, I wanted to do the same with the exercises API and the workout log. It would be awesome if I could click into a workout and hit 'Add workout' then the user can log how many sets/reps/weight they did so they can see their progress; as in fitness the most discouraging thing is when you don't see progress.
 
-### `npm test`
+## User Stories
+The bulk of this project was spent trying to navigate through the API's and how to access the properties correctly. It took several days - a week to try and figure out the exerciseDB API. The food API was a lot easier to figure out, although this did take some time, it only took a few hours to implement it into my project. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Notes
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Want to be able to figure out the problems in the 'Unsolved Problems' section.
+- Maybe switch up the API for the food search. myFitnessPal's API is extensive and has way more information. Looked a little too overwhelming with the time given for the project. If I were to keep continuing with this project, I would switch it up to the myFitnessPal API for sure. 
+- Want to be able to add pictures, maybe add another section that is 'Progress Pictures' so users can see differences in their body composition throughout their journey. (I have a 'Progress' album in my phone that can remotivate me if I'm feeling discouraged myself.) 
+- Recommended workout section would be awesome... if a user skips a leg day the app can tell them to go do leg day. 
