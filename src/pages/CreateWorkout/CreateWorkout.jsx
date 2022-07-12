@@ -8,7 +8,7 @@ import { Stack, Button } from '@mui/material';
 
 
 const CreateWorkout = () => {
-  // If you don't specifically define object properties in your state, if you set your state anywhere in your code, it will automatically create the state object property for you.
+
   const [workoutDetails, setWorkoutDetails] = useState({
     workout: '',
     duration: 0,
@@ -34,7 +34,6 @@ const CreateWorkout = () => {
     navigate('/workouts')
   }
 
-  // console.log(workoutDetails)
   return (
     <Box
       component="form"

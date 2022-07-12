@@ -17,15 +17,12 @@ const Login = ({ setUser }) => {
     }
 
     const handleSubmit = async e => {
-        // Prevents form from being submitted to the server
         e.preventDefault()
         try {
             const user = await login(credentials)
-            // Once we get our user back, update our App.js user state with the user's firstname
             console.log(user)
             if (user) {
                 setUser(user)
-                // Redirect to movies page after successful login
                 navigate('/home')
             } else {
                 throw new Error

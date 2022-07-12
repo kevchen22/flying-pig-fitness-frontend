@@ -13,8 +13,6 @@ const UpdateWorkoutForm = () => {
 
     const [workoutDetails, setWorkoutDetails] = useState(workout)
 
-    // console.log(location.state)
-
     const handleChange = e => {
         setWorkoutDetails({
             ...workoutDetails,
@@ -26,7 +24,7 @@ const UpdateWorkoutForm = () => {
         e.preventDefault()
         try {
             const res = await workoutService.updateWorkout(workoutDetails)
-            // console.log(res)
+
             if (res.status === 200) navigate(`/workouts/${workoutDetails._id}`, { state: workoutDetails })
         } catch (e) {
             console.log(e)

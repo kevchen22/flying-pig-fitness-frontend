@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getWorkout } from '../../utilities/workout-service'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Stack, Typography, Button } from '@mui/material'
 
 
@@ -22,7 +22,7 @@ const Workouts = () => {
                 color="error"
                 href="/workouts/create"
                 sx={{
-                    backgroundColor: '#ff2625',
+                    backgroundColor: '#fda7fe',
                     padding: '10px',
                     mt: 5
                 }}
@@ -67,6 +67,11 @@ const Workouts = () => {
                                 }}>Date: {workout.date}</Typography>
                                 <Button
                                     onClick={() => navigate(`/workouts/${workout._id}/edit`, { state: workout })}
+                                    sx={{
+                                        backgroundColor: '#fda7fe',
+                                        padding: '10px',
+                                        mt: 2
+                                    }}
                                 >
                                     Edit
                                 </Button>

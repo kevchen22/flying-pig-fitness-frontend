@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { foodOptions, fetchData } from '../../utilities/fetchData';
 import { Stack, Typography, Box, Button, TextField } from '@mui/material'
 import FoodInfo from '../../components/FoodInfo';
@@ -24,7 +24,8 @@ const FoodNutrition = () => {
             fontSize: { lg: '44px', xs: '30px' }
         }}
             mb="50px"
-            textAlign="center">
+            textAlign="center"
+            color='#fff0d4'>
             Food Nutrition Data! Even our pigs are on a strict diet!
         </Typography>
         <Box position="relative" mb="72px">
@@ -47,7 +48,7 @@ const FoodNutrition = () => {
             />
             <Button className="search-btn"
             sx={{
-                bgcolor: '#FF2625',
+                bgcolor: '#fda7fe',
                 color: '#fff',
                 textTransform: 'none',
                 width: { lg: '175px', xs: '80px'},

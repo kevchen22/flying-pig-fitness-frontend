@@ -7,9 +7,6 @@ const FoodDetails = () => {
     const navigate = useNavigate()
     const foodDetails = location.state
 
-    // console.log(location.state)
-
-    // console.log(location)
 
     const handleDelete = async () => {
         try {
@@ -36,11 +33,21 @@ const FoodDetails = () => {
             <Typography>Sugar (grams): {foodDetails.sugar}</Typography>
             <Button 
                 onClick={() => navigate(`/foodlog/${foodDetails._id}/edit`, { state: foodDetails })}
+                sx={{
+                    backgroundColor: '#fda7fe',
+                    padding: '10px',
+                    mt: 2
+                }}
             >
                 Edit
             </Button>
             <Button  
                 onClick={handleDelete}
+                sx={{
+                    backgroundColor: '#fda7fe',
+                    padding: '10px',
+                    mt: 1
+                }}
             >
                 Delete
             </Button>

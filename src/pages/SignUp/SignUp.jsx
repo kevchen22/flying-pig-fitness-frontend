@@ -31,7 +31,7 @@ const SignUp = ({ setUser }) => {
         e.preventDefault()
         try {
             const user = await signUp(newUser)
-            // console.log(user)
+
             setUser(user)
             if (user) navigate('/home')
         } catch (e) {

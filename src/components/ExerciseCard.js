@@ -8,8 +8,8 @@ const ExerciseCard = ({ exercise }) => {
             <img src={exercise.gifUrl} alt={exercise.name} />
             <Stack direction="row">
                 <Button sx={{ ml: '21px', 
-                color: '#fff', 
-                background: '#ffa9a9', 
+                color: '#fff0d4', 
+                background: '#fda7fe', 
                 fontSize: '14px', 
                 borderRadius: '20px', 
                 textTransform:'capitalize'
@@ -17,8 +17,8 @@ const ExerciseCard = ({ exercise }) => {
                     {exercise.bodyPart}
                 </Button>
                 <Button sx={{ ml: '21px', 
-                color: '#fff', 
-                background: '#fcc757', 
+                color: '#fff0d4', 
+                background: '#fda7fe', 
                 fontSize: '14px', 
                 borderRadius: '20px', 
                 textTransform:'capitalize'
@@ -26,7 +26,7 @@ const ExerciseCard = ({ exercise }) => {
                     {exercise.target}
                 </Button>
             </Stack>
-            <Typography ml="21px" color="#000" fontWeight="bold" mt="11px" pb="10px" textTransform="capitalize" fontSize="22px">
+            <Typography ml="21px" color="#fff0d4" fontWeight="bold" mt="11px" pb="10px" textTransform="capitalize" fontSize="22px">
                 {exercise.name}
             </Typography>
         </Link>

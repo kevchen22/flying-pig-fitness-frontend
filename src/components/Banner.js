@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack, Typography, Button } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 
 import BannerImage from '../assets/images/Banner.png'
 
@@ -11,7 +11,7 @@ const Banner = () => {
         }}
             position="relative" p="20px"
         >
-            <Typography color='#FF2625'
+            <Typography color='#fda7fe'
                 fontWeight="600"
                 fontSize="50px"
             >
@@ -19,12 +19,13 @@ const Banner = () => {
             </Typography>
             <Typography fontWeight={700}
                 sx={{ fontSize: { lg: '44px', xs: '40px' } }}
-                mb="23px" mt="30px">
+                mb="23px" mt="30px" color='#fff0d4'>
                 We made pigs fly, so you can get<br />  the body of your dreams!
             </Typography>
             <Typography fontSize="22px"
                 lineHeight="35px"
                 mb={4}
+                color='#fff0d4'
             >
                 Check out the most effective exercises!
             </Typography>
@@ -32,7 +33,7 @@ const Banner = () => {
             variant="contained" 
             color="error" 
             href="#exercises"
-            sx={{ backgroundColor: '#ff2625',
+            sx={{ backgroundColor: '#fda7fe',
             padding: '10px' }}
             >Explore Exercises</Button>
             <Typography

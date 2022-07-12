@@ -14,7 +14,7 @@ const setOptions = () => {
 export const getFood = async () => {
     try {
         const response = await axios.get(BASE_URL, setOptions())
-        // console.log(response)
+
         return response
     } catch (e) {
         console.log(e)
@@ -32,7 +32,6 @@ export const createFood = async foodDetails => {
 
 export const updateFood = async newFoodDetails => {
     try {
-        // console.log(newWorkoutDetails)
         const updatedFood = await axios.put(`${BASE_URL}/${newFoodDetails._id}`, newFoodDetails, setOptions())
         return updatedFood
     } catch (e) {

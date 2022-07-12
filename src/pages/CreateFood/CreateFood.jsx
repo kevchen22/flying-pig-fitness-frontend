@@ -8,7 +8,7 @@ import { Stack, Button } from '@mui/material';
 
 
 const CreateFood = () => {
-    // If you don't specifically define object properties in your state, if you set your state anywhere in your code, it will automatically create the state object property for you.
+
     const [foodDetails, setFoodDetails] = useState({
         food: '',
         calories: 0,

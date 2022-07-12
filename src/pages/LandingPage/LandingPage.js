@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack, Typography, Button } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 import BannerImage from '../../assets/images/Banner.png'
 
@@ -11,7 +11,7 @@ const LandingPage = () => {
         }}
             position="relative" p="20px"
         >
-            <Typography color='#FF2625'
+            <Typography color='#fda7fe'
                 fontWeight="600"
                 fontSize="50px"
             >
@@ -19,14 +19,15 @@ const LandingPage = () => {
             </Typography>
             <Typography fontWeight={700}
                 sx={{ fontSize: { lg: '44px', xs: '40px' } }}
-                mb="23px" mt="30px">
+                mb="23px" mt="30px" color='#fff0d4'>
                 We made pigs fly, so you can get<br />  the body of your dreams!
             </Typography>
             <Typography fontSize="22px"
                 lineHeight="35px"
                 mb={4}
+                color='#fff0d4'
             >
-                Check out the most effective exercises!
+                Check out the most effective exercises! <br />Sign Up today!
             </Typography>
             <Typography
                 fontWeight={600}

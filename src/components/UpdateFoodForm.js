@@ -24,7 +24,7 @@ const UpdateFoodForm = () => {
         e.preventDefault()
         try {
             const res = await foodLogService.updateFood(foodDetails)
-            // console.log(res)
+
             if (res.status === 200) navigate(`/foodlog/${foodDetails._id}`, { state: foodDetails })
         } catch (e) {
             console.log(e)

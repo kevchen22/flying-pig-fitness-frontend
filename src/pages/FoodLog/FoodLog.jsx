@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getFood } from '../../utilities/foodlog-service'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Stack, Typography, Button } from '@mui/material'
 
 
@@ -22,7 +22,7 @@ const FoodLog = () => {
                 color="error"
                 href="/foodlog/create"
                 sx={{
-                    backgroundColor: '#ff2625',
+                    backgroundColor: '#fda7fe',
                     padding: '10px',
                     mt: 5
                 }}
@@ -79,6 +79,11 @@ const FoodLog = () => {
                                 }}>Date: {food.date}</Typography>
                                 <Button
                                     onClick={() => navigate(`/foodlog/${foodLog._id}/edit`, { state: food })}
+                                    sx={{
+                                        backgroundColor: '#fda7fe',
+                                        padding: '10px',
+                                        mt: 2
+                                    }}
                                 >
                                     Edit
                                 </Button>

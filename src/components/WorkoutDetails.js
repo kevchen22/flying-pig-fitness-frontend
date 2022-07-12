@@ -7,9 +7,6 @@ const WorkoutDetails = () => {
     const navigate = useNavigate()
     const workoutDetails = location.state
 
-    // console.log(location.state)
-
-    // console.log(location)
 
     const handleDelete = async () => {
         try {
@@ -36,11 +33,20 @@ const WorkoutDetails = () => {
             <Typography>Average Heart Rate: {workoutDetails.avgHeartRate} bpm</Typography>
             <Button 
                 onClick={() => navigate(`/workouts/${workoutDetails._id}/edit`, { state: workoutDetails })}
+                sx={{
+                    backgroundColor: '#fda7fe',
+                    padding: '10px',
+                    mt: 2
+                }}
             >
                 Edit
             </Button>
             <Button  
                 onClick={handleDelete}
+                sx={{
+                    backgroundColor: '#fda7fe',
+                    mt: 1
+                }}
             >
                 Delete
             </Button>
