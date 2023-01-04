@@ -65,7 +65,7 @@ const SignUp = ({ setUser }) => {
                         id="form3Example1n"
                         label='Last Name'
                         name='lastName'
-                        value={newUser.lastname}
+                        value={newUser.lastName}
                         onChange={handleChange}
                         required
                     />
