@@ -1,7 +1,7 @@
 # Flying-Pig-Fitness-Frontend
 
 ## Description
-Link to App: http://flying-pig-fitness-frontend.herokuapp.com/
+Link to App: https://flying-pig-fitness-frontend.herokuapp.com/
 ***
 Creating the frontend of the fitness application, creating pages, components and incorporating the requests to API's.
 

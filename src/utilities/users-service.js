@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://flying-pig-fitness-backend.herokuapp.com/api/v1/users'
+const BASE_URL = 'https://flying-pig-fitness-backend.herokuapp.com/api/v1/users'
 
 export const login = async credentials => {
     try {
